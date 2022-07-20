@@ -1,4 +1,4 @@
-name: qtadmin_client_flutter
+name: qtadmin
 description: 量潮企业管理后台
 
 # The following line prevents the package from being accidentally published to
@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 0.1.0-alpha.1
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
@@ -29,7 +29,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  qtprojects_widgets:
+    git:
+      url: https://e.coding.net/quanttide/qtcloud-projects/qtprojects-widgets-flutter.git
+      ref: 0.1.0-alpha.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
