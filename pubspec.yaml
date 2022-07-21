@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 0.1.0-alpha.1
+version: 0.1.0-alpha.2
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
@@ -92,3 +92,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+# 环境变量
+environment_config:
+  fields:
+    env:
+      env_var: ENV
+      default: development
+    qtProjectsApiRoot:
+      env_var: QTPROJECTS_API_ROOT
+      default: qtprojects-1954511-1256954489.ap-shanghai.run.tcloudbase.com
