@@ -15,7 +15,7 @@ workflows:
       - flutter config --enable-macos-desktop
       - flutter pub run environment_config:generate
       - find . -name "Podfile" -execdir pod install \;
-      - flutter build macos
+      - flutter build macos --debug
     artifacts:
       - build/macos/**/*.app.zip
       - build/macos/**/*.pkg
