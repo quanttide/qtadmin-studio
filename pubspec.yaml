@@ -29,10 +29,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_strategy: ^0.2.0
+  # 子应用组件库
   qtprojects_widgets:
     git:
       url: https://e.coding.net/quanttide/qtcloud-projects/qtprojects-widgets-flutter.git
-      ref: 0.1.0-alpha.1
+      ref: 0.1.0-alpha.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
