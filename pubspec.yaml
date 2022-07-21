@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   url_strategy: ^0.2.0
+  environment_config: ^3.1.0
   # 子应用组件库
   qtprojects_widgets:
     git:
