@@ -6,6 +6,10 @@ workflows:
       flutter: default
       xcode: latest
       cocoapods: default
+    triggering:
+      events:
+        - tag
+      cancel_previous_builds: true
     scripts:
       - flutter packages pub get
       - flutter config --enable-macos-desktop
