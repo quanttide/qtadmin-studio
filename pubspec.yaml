@@ -1,5 +1,5 @@
-name: qtadmin
-description: 量潮企业管理后台
+name: qtadmin_studio
+description: 量潮管理后台客户端
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -15,10 +15,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 0.1.0-alpha.2
+version: 0.0.1
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -29,13 +29,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  url_strategy: ^0.2.0
-  environment_config: ^3.1.0
-  # 子应用组件库
-  qtprojects_widgets:
-    git:
-      url: https://e.coding.net/quanttide/qtcloud-projects/qtprojects-widgets-flutter.git
-      ref: 0.1.0-alpha.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -50,7 +43,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -93,13 +86,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
-# 环境变量
-environment_config:
-  fields:
-    env:
-      env_var: ENV
-      default: development
-    qtProjectsApiRoot:
-      env_var: QTPROJECTS_API_ROOT
-      default: qtprojects-1954511-1256954489.ap-shanghai.run.tcloudbase.com

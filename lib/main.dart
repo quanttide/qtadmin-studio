@@ -1,15 +1,10 @@
 /// APP入口
 
 import 'package:flutter/material.dart';
-import 'package:url_strategy/url_strategy.dart';
-
-import 'package:qtprojects_widgets/qtprojects_widgets.dart';
-import 'environment_config.dart';
 
 
 /// APP入口函数
 void main() {
-  setPathUrlStrategy();
   runApp(const QtAdmin());
 }
 
@@ -25,11 +20,9 @@ class QtAdmin extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      routes: {
+      routes: const {
         /// 项目列表页面
-        '/': (context) => const ProjectListRoute(
-            apiRoot: EnvironmentConfig.qtProjectsApiRoot
-        ),
+        
       }
     );
   }
