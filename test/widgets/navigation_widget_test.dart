@@ -14,8 +14,9 @@ void main() {
   });
 
   testWidgets('NavigationWidget handles route navigation', (WidgetTester tester) async {
-    // 在测试中包裹MaterialApp来提供导航上下文
-    // 配置路由以确保测试时路由存在
+    // 初始化测试脚手架：
+    // - 构建包含路由配置的`MaterialApp`
+    // - 注册`/home`路由对应测试页面
     await tester.pumpWidget(MaterialApp(
       home: NavigationWidget(),
       routes: {
@@ -23,9 +24,15 @@ void main() {
       },
     ));
 
-    // Tap the first list item and verify navigation
+    // 触发导航操作：
+    // 1. 通过ListTile组件选择器定位首个可点击元素
+    // 2. 执行模拟点击事件
+    // 3. 等待路由过渡动画完成
     await tester.tap(find.byType(ListTile).first);
     await tester.pumpAndSettle();
+
+    // 验证导航结果：
+    // 检查目标页面是否成功渲染预期文本内容
     expect(find.text('首页'), findsOneWidget);
   });
 }
