@@ -15,15 +15,17 @@ void main() {
 
   testWidgets('NavigationWidget handles route navigation', (WidgetTester tester) async {
     // 在测试中包裹MaterialApp来提供导航上下文
+    // 配置路由以确保测试时路由存在
     await tester.pumpWidget(MaterialApp(
       home: NavigationWidget(),
+      routes: {
+         '/home': (context) => const Text('首页'),
+      },
     ));
 
     // Tap the first list item and verify navigation
     await tester.tap(find.byType(ListTile).first);
     await tester.pumpAndSettle();
-
-    // 直接通过tester获取正确上下文
-    expect(ModalRoute.of(tester.element(find.byType(ListTile)))!.settings.name, '/home');
+    expect(find.text('首页'), findsOneWidget);
   });
 }
